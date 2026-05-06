@@ -8,7 +8,7 @@ RUN mvn install
 
 FROM tomcat:9.0
 
-COPY --from=builder /app/target/app.war /usr/local/tomcat/webapps/app.war
+COPY --from=builder /app/target/*.war /usr/local/tomcat/webapps/*.war
 
 EXPOSE 8080
 
